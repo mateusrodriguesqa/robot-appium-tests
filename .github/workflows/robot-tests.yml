@@ -1,0 +1,41 @@
+name: Mobile Robot Framework Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  run-mobile-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Instalar dependências
+        run: |
+          sudo apt update
+          sudo apt install -y nodejs npm default-jdk wget unzip
+          pip install -r requirements.txt
+
+      - name: Instalar Appium
+        run: |
+          npm install -g appium
+          appium -v
+
+      - name: Iniciar Appium em segundo plano
+        run: |
+          nohup appium > appium.log 2>&1 &
+          sleep 10
+
+      - name: Rodar testes Robot Framework
+        run: |
+          robot -d results tests/
+
+      - name: Publicar artefatos
+        uses: actions/upload-artifact@v3
+        with:
+          name: relatorio-mobile
+          path: results
