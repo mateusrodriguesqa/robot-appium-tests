@@ -1,0 +1,6 @@
+PLATFORM_NAME: Android
+PLATFORM_VERSION: 11.0
+DEVICE_NAME: emulator-5554  
+APP_PACKAGE: com.upmenu.test
+APP_ACTIVITY: com.upmenu.MainActivity
+AUTOMATION_NAME: UiAutomator2

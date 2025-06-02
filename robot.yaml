@@ -1,0 +1,5 @@
+*** Settings ***
+Library         AppiumLibrary
+Resource        resources/keywords.robot
+Variables       variables/environment.yaml
+

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.10.17 on darwin)" generated="2025-06-01T23:20:29.377260" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Login" source="/Users/mateusrodrigues/robot-appium-tests/tests/test_login.robot">
+<test id="s1-t1" name="Login E Validar Tela Meus Pedidos" line="11">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=11.0</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.upmenu.test</arg>
+<arg>appActivity=com.upmenu.MainActivity</arg>
+<arg>automationName=UiAutomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-06-01T23:20:29.461994" elapsed="2.493363"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-01T23:20:34.968840" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-01T23:20:31.956053" elapsed="3.014836"/>
+</kw>
+<kw name="Tap With Positions" owner="AppiumLibrary">
+<arg>200</arg>
+<arg>500</arg>
+<doc>Taps on a particular place with up to five fingers, holding for a
+certain time</doc>
+<status status="PASS" start="2025-06-01T23:20:34.972562" elapsed="0.520027"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-01T23:20:36.494154" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-01T23:20:35.492961" elapsed="1.001740"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2025-06-01T23:20:36.497596" level="INFO">Starting process:
+adb shell "input text \"mateusrodrigues.bass@gmail.com\""</msg>
+<msg time="2025-06-01T23:20:36.506770" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-06-01T23:20:37.161664" level="INFO">Process completed.</msg>
+<arg>adb</arg>
+<arg>shell</arg>
+<arg>input text "${EMAIL}"</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-06-01T23:20:36.495691" elapsed="0.666463"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-01T23:20:38.165034" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-01T23:20:37.163075" elapsed="1.002486"/>
+</kw>
+<kw name="Tap With Positions" owner="AppiumLibrary">
+<arg>200</arg>
+<arg>650</arg>
+<doc>Taps on a particular place with up to five fingers, holding for a
+certain time</doc>
+<status status="PASS" start="2025-06-01T23:20:38.166426" elapsed="0.510973"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-01T23:20:39.679249" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-01T23:20:38.677826" elapsed="1.001950"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2025-06-01T23:20:39.682335" level="INFO">Starting process:
+adb shell "input text \"Qa270300#\""</msg>
+<msg time="2025-06-01T23:20:39.686980" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-06-01T23:20:40.275276" level="INFO">Process completed.</msg>
+<arg>adb</arg>
+<arg>shell</arg>
+<arg>input text "${PASSWORD}"</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-06-01T23:20:39.680726" elapsed="0.595250"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-01T23:20:41.279654" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-01T23:20:40.277020" elapsed="1.003026"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-06-01T23:20:41.455390" level="INFO">xpath criteria: //android.widget.TextView[@text="Log in"]</msg>
+<arg>xpath=//android.widget.TextView[@text="Log in"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-06-01T23:20:41.280762" elapsed="0.174690"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-06-01T23:20:41.456271" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Log in"]'.</msg>
+<msg time="2025-06-01T23:20:42.618642" level="INFO">xpath criteria: //android.widget.TextView[@text="Log in"]</msg>
+<arg>xpath=//android.widget.TextView[@text="Log in"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-06-01T23:20:41.455586" elapsed="1.163307"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-01T23:20:49.622368" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-01T23:20:42.619455" elapsed="7.003517"/>
+</kw>
+<status status="PASS" start="2025-06-01T23:20:29.461440" elapsed="20.162587"/>
+</test>
+<status status="PASS" start="2025-06-01T23:20:29.378049" elapsed="20.248069"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Login" id="s1" pass="1" fail="0" skip="0">Test Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

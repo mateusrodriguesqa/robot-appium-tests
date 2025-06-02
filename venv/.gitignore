@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Robot Framework
+output.xml
+log.html
+report.html
+*.png
+
+# Appium
+*.apk
+.idea/
+
+# VSCode
+.vscode/
